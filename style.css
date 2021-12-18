@@ -21,6 +21,18 @@ body, html {
         transform: rotate(0deg);
     }
 
+    25%, 75% {
+        height: 45px;
+        width: 45px;
+        top: 49.8;
+        left: 49.8%;
+    }
+
+    50% {
+        height: 35px;
+        width: 35px;
+    }
+
     100% {
         transform: rotate(360deg);
     }
@@ -33,60 +45,44 @@ body, html {
     position: absolute;
 }
 
-.c1 {
+.node {
     height: 15px;
     width: 15px;
+    border-radius: 50%;
     background: #0FCACA;
+    margin: 1px;
+    animation: color-shift 3s linear 0s infinite;
+}
+
+@keyframes color-shift {
+    0%, 50%, 100% {
+        background: #0FCACA;
+    }
+
+    25%, 75% {
+        background: #076868;
+    }
 }
 
 .top-left {
-    top: 20%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    position: relative;
-}
-
-.c2 {
-    height: 15px;
-    width: 15px;
-    background: #076868;
+   top: 0%;
+   left: 0%;
+   position: absolute;
 }
 
 .top-right {
-    top: 20%;
-    left: 80%;
-    transform: translate(-50%, -50%);
+    top: 0%;
+    left: 50%;
     position: absolute;
-}
-
-.c3 {
-    height: 15px;
-    width: 15px;
-    background: #0FCACA;
-}
-
-.bottom-right {
-    top: 80%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-}
-
-.c4 {
-    height: 15px;
-    width: 15px;
-    background: #0FCACA;
 }
 
 .bottom-left {
-    top: 80%;
-    left: 20%;
-    transform: translate(-50%, -50%);
+    top: 50%;
     position: absolute;
 }
 
-
-
-.circle {
-    border-radius: 50%;
+.bottom-right {
+    top: 50%;
+    left: 50%;
+    position: absolute;
 }
